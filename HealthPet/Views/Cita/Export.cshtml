@@ -1,0 +1,125 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@using HealthPet.Models
+@model CitaModel
+@{
+    ViewData["Title"] = "Generar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                $("input[name='GridHtml']").val($("#Grid").html());
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 9pt;
+        }      
+    </style>
+</head>
+<body>
+
+
+    <h2>HealthPet</h2>
+    <hr />
+
+    <h4>Detalle de Cita Programada</h4>
+    <hr />
+    <div id="Grid">
+        <table cellpadding="5" cellspacing="0" style="border: 1px solid #ccc;font-size: 9pt;">
+            <tr>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">#Cita</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">FechaCita</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">HoraCita</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">DetalleCita</th>
+            </tr>
+           
+            <tr>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.CodCita)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.FechaCita)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.HoraCita)</td>
+                <td style="width:250px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.DetalleCita)</td>
+            </tr>
+           
+        </table>
+    </div>
+     <br />
+     <br />
+
+    <h4>Datos de Dueño</h4>
+    <hr />
+    <div id="Grid">
+        <table cellpadding="5" cellspacing="0" style="border: 1px solid #ccc;font-size: 9pt;">
+            <tr>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">NombreDueño</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">CédulaDueño</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">TeléfonoContacto</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">CorreoDueño</th>
+            </tr>
+               
+            <tr>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.NombreDueno) @Html.DisplayTextFor(m => m.ApellidoDueno)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.CedulaDueno)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.TelefonoDueno)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.CorreoDueno)</td>
+            </tr>
+           
+        </table>
+    </div>
+    <br />
+    <br />
+
+    <h4>Datos de Paciente</h4>
+    <hr />
+    <div id="Grid">
+        <table cellpadding="5" cellspacing="0" style="border: 1px solid #ccc;font-size: 9pt;">
+            <tr>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">NombrePaciente</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">EdadPaciente</th>
+                <th style="background-color: #B8DBFD;border: 1px solid #ccc">RazaPaciente</th>
+            </tr>
+
+            <tr>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.NombrePaciente)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.EdadPaciente)</td>
+                <td style="width:120px;border: 1px solid #ccc">@Html.DisplayTextFor(m => m.RazaPaciente)</td>
+            </tr>
+           
+        </table>
+    </div>
+    <br />
+    <br />
+
+
+     <br />
+     <br />
+
+    <form asp-action="Export" asp-controller="Cita" method="post">
+        <input type="hidden" name="GridHtml" />
+        <input type="submit" value="Export" class="btnSubmit" />
+    </form>
+
+    <button onclick="myfun()">Imprimir</button>
+    <script type="text/javascript">
+    function myfun(){
+        window.print();
+    }
+
+    </script>
+
+
+
+</body>
+</html>

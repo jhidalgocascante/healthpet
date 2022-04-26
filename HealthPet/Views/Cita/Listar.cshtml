@@ -23,6 +23,7 @@
                  <th>Tipo Paciente</th>
                  <th>Editar</th>
                  <th>Eliminar</th>
+                 <th>Imprimir</th>
              </tr>
          </thead>
          <tbody>
@@ -42,7 +43,7 @@
                           <a asp-action= "Eliminar" asp-controller="Cita" class="btn btn-danger" asp-route-CodCita= "@item.CodCita">Eliminar</a>
                      </td>
                       <td>
-                          <a asp-action= "Generar" asp-controller="Cita" class="btn btn-primary" asp-route-CodCita= "@item.CodCita">Imprimir</a>
+                          <a asp-action= "Export" asp-controller="Cita" class="btn btn-primary" asp-route-CodCita= "@item.CodCita">Imprimir</a>
                      </td>
                  </tr>
                  

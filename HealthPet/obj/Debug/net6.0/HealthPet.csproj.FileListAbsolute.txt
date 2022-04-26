@@ -247,3 +247,8 @@ C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\
 C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\Rotativa.AspNetCore.dll
+C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\Model.dll
+C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\Model.pdb
+C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\itextsharp.dll
+C:\Users\JulioHidalgoCascante\source\repos\HealthPet\HealthPet\bin\Debug\net6.0\itextsharp.xmlworker.dll
