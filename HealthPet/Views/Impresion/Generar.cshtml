@@ -1,0 +1,20 @@
+﻿@model CitaModel
+@{
+    ViewData["Title"] = "Generar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Editar Cita
+  </div>
+  <div class="card-body">
+      <form asp-action= "Editar" asp-controlller="Cita" method = "post">
+<input asp-for="CodCita" type="hidden" class="form-control" />
+
+<b>Cita</b>@Model.DetalleCita<br/>
+</form>
+  </div>
+</div>
+

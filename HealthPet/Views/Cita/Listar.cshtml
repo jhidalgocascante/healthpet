@@ -1,0 +1,54 @@
+﻿@model List<CitaModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Lista Citas
+  </div>
+  <div class="card-body">
+     <a asp-action= "Guardar" asp-controller="Cita" class="btn btn-success">Crear Nuevo</a>
+     <hr/>
+     <table class = "table table-bordered">
+         <thead>
+             <tr>
+                 <th>Código Cita</th>
+                 <th>Nombre Servicio</th>
+                 <th>Fecha Cita</th>
+                 <th>Hora Cita</th>
+                 <th>Dueño</th>
+                 <th>Tipo Paciente</th>
+                 <th>Editar</th>
+                 <th>Eliminar</th>
+             </tr>
+         </thead>
+         <tbody>
+             @foreach (var item in Model)
+             {
+                 <tr>
+                     <td>@item.CodCita</td>
+                     <td>@item.NombreServicio</td>
+                     <td>@item.FechaCita</td>
+                     <td>@item.HoraCita</td>
+                     <td>@item.NombreDueno @item.ApellidoDueno</td>
+                     <td>@item.TipoPaciente</td>
+                     <td>
+                          <a asp-action= "Editar" asp-controller="Cita" class="btn btn-primary" asp-route-CodCita= "@item.CodCita">Editar</a>
+                     </td>
+                     <td>
+                          <a asp-action= "Eliminar" asp-controller="Cita" class="btn btn-danger" asp-route-CodCita= "@item.CodCita">Eliminar</a>
+                     </td>
+                      <td>
+                          <a asp-action= "Generar" asp-controller="Cita" class="btn btn-primary" asp-route-CodCita= "@item.CodCita">Imprimir</a>
+                     </td>
+                 </tr>
+                 
+             }
+         </tbody>
+     </table>
+
+  </div>
+</div>

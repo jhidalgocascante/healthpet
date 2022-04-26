@@ -1,0 +1,111 @@
+﻿@model CitaModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Editar Cita
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Editar" asp-controlller="Cita" method = "post">
+
+          <input asp-for="CodCita" type="hidden" class="form-control" />
+
+   
+      <div class="mb-3">
+        <label class="form-label">Servicio</label>
+        <input asp-for="CodServicio" type="text" class="form-control" />
+        <span asp-validation-for="CodServicio" class="text-danger"> </span>
+      </div>
+
+       <div class="mb-3">
+        <label class="form-label">Detalle de la atención</label>
+        <input asp-for="DetalleCita" type="text" class="form-control" />
+        <span asp-validation-for="DetalleCita" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Fecha Cita</label>
+        <input asp-for="FechaCita" type="text" class="form-control" />
+        <span asp-validation-for="FechaCita" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Hora Cita</label>
+        <input asp-for="HoraCita" type="text" class="form-control">
+        <span asp-validation-for="HoraCita" class="text-danger"> </span>
+      </div> 
+
+       <div class="mb-3">
+        <label class="form-label">Cédula Dueño</label>
+        <input asp-for="CedulaDueno" type="text" class="form-control">
+        <span asp-validation-for="CedulaDueno" class="text-danger"> </span>
+      </div> 
+
+       <div class="mb-3">
+        <label class="form-label">Nombre Dueño</label>
+        <input asp-for="NombreDueno" type="text" class="form-control">
+        <span asp-validation-for="NombreDueno" class="text-danger"> </span>
+      </div> 
+
+      <div class="mb-3">
+        <label class="form-label">Apellido Dueño</label>
+        <input asp-for="ApellidoDueno" type="text" class="form-control">
+        <span asp-validation-for="ApellidoDueno" class="text-danger"> </span>
+      </div> 
+
+       <div class="mb-3">
+        <label class="form-label">Teléfono Dueño</label>
+        <input asp-for="TelefonoDueno" type="text" class="form-control">
+        <span asp-validation-for="TelefonoDueno" class="text-danger"> </span>
+      </div> 
+
+      <div class="mb-3">
+        <label class="form-label">Correo Dueño</label>
+        <input asp-for="CorreoDueno" type="text" class="form-control">
+        <span asp-validation-for="CorreoDueno" class="text-danger"> </span>
+      </div> 
+
+            <div class="mb-3">
+        <label class="form-label">Tipo Paciente</label>
+        <input asp-for="TipoPaciente" type="text" class="form-control">
+        <span asp-validation-for="TipoPaciente" class="text-danger"> </span>
+      </div> 
+
+
+            <div class="mb-3">
+        <label class="form-label">Nombre Paciente</label>
+        <input asp-for="NombrePaciente" type="text" class="form-control">
+        <span asp-validation-for="NombrePaciente" class="text-danger"> </span>
+      </div> 
+
+            <div class="mb-3">
+        <label class="form-label">Edad Paciente</label>
+        <input asp-for="EdadPaciente" type="text" class="form-control">
+        <span asp-validation-for="EdadPaciente" class="text-danger"> </span>
+      </div> 
+
+            <div class="mb-3">
+        <label class="form-label">Raza Paciente</label>
+        <input asp-for="RazaPaciente" type="text" class="form-control">
+        <span asp-validation-for="RazaPaciente" class="text-danger"> </span>
+      </div> 
+
+
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="Cita" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+
+
+
+
+
+
